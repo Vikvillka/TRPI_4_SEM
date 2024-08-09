@@ -1,0 +1,22 @@
+.search {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+  
+.search input[type="text"] {
+   
+    width: 400px;
+}
+ 
+  
+.search label {
+    margin-right: 10px;
+}
+  
+.search input[type="radio"] {
+    margin-right: 5px;
+}

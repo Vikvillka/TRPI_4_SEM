@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 450px;
+            border-radius: 10px;
+        }
+        legend{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        label {
+            display: flex;
+            width: 100%;
+            margin-top: 10px;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+        select,
+        textarea {
+            border-radius: 4px;
+            width: 230px;
+            align-self: flex-end;
+        }
+        input[type="submit"] {
+            width: auto;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateForm()" novalidate>
+        <fieldset>
+            <legend>Заполните форму</legend>
+            <label>Фамилия
+                <input type="text" id="secondName" required>
+            </label>
+            <span id="secondNameError" class="error"></span>
+            <label>Имя
+                <input type="text" id="name" required>
+            </label>
+            <span id="nameError" class="error"></span>
+            <label>E-mail
+                <input type="email" id="email" required>
+            </label>
+            <span id="emailError" class="error"></span>
+            <label>Номер телефона:
+                <input type="tel" id="phone">
+            </label>
+            <span id="phoneError" class="error"></span>
+            <label>Город:
+                <select id="select" required>
+                    <option>Выберите вариант</option>
+                    <option>Минск</option>
+                    <option>Сморгонь</option>
+                    <option>Барановичи</option>
+                    <option>Туховичи</option>
+                </select>
+            </label>
+            <span id="selectError" class="error"></span>
+            <label>Я учусь в БГТУ:
+                <input type="checkbox" name="university" id="bstu">
+            </label>
+            <label>На каком курсе Вы учитесь?:
+                <input type="radio" name="course" id="cours1">1
+                <input type="radio" name="course" id="cours2">2
+                <input type="radio" name="course" id="cours3">3
+                <input type="radio" name="course" id="cours4">4
+            </label>
+            <label>Расскажите о себе:
+                <textarea id="about"></textarea>
+            </label>
+            <span id="aboutError" class="error"></span>
+            <input type="submit" id="submit" name="submit_btn" value="Проверить">
+        </fieldset>
+    </form>
+    <script src="Lab_1.js">
+    </script>
+</body>
+</html>

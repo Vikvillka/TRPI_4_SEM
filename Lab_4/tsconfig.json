@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "lib": ["dom", "es2019"],
+        "removeComments": true,
+        "outFile": "lab4.js"
+    },
+    "files":[
+        "lab4.ts"
+    ]
+
+}
